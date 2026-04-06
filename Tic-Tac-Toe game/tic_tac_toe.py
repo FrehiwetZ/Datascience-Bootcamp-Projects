@@ -1,4 +1,4 @@
-def print_board(boad):
+def print_board(board):
     print('\n')
     for i in range (3):
         print(" | ".join(board[i]))
