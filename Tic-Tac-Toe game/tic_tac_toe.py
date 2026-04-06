@@ -6,11 +6,11 @@ def print_board(boad):
             print ("--+---+--")
         print('\n')
 
-def check_winner(board, player)
+def check_winner(board, player):
     #check rows
     for row in board:
         if all(cell == player for cell in row):
-            retutn True
+            return True
     
     #check columns
     for col in range (3):
@@ -19,10 +19,10 @@ def check_winner(board, player)
     
     #check diagonals
     if all(board[i][i] == player for i in range(3)):
-        retutn True
+        return True
     
     if all(board[i][2-i] == player for i in range(3)):
-        retutn True
+        return True
     
     return False
 
