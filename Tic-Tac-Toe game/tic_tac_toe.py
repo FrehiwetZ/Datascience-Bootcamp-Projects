@@ -1,3 +1,4 @@
+#define a function to print the board
 def print_board(board):
     print('\n')
     for i in range (3):
@@ -6,6 +7,7 @@ def print_board(board):
             print ("--+---+--")
         print('\n')
 
+#define a function to check for a winner
 def check_winner(board, player):
     #check rows
     for row in board:
@@ -26,12 +28,14 @@ def check_winner(board, player):
     
     return False
 
+#define a function to check for a draw
 def is_draw(board):
     for row in board:
         if " " in row:
             return False
         return True
-    
+
+#define the main function to play tic-tac-toe   
 def tic_tac_toe():
     #create an empty board
     board = [[ " " for _ in range (3)] for _ in range (3)]
