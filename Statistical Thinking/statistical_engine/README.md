@@ -84,6 +84,6 @@ The following checklist demonstrates that the project meets all required functio
 | Monte Carlo simulation runs for multiple day ranges   | ✅      |
 | All unit tests pass                                   | ✅      |
 
-#Author
+## Author
 Name: Frehiwet Zerihun
 Date:April 7,2026G.c
