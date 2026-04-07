@@ -1,5 +1,9 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
+from stat_engine import StatEngine
 import unittest
-from src.stat_engine import StatEngine
 import math
 
 class TestStatEngine(unittest.TestCase):
@@ -17,18 +21,13 @@ class TestStatEngine(unittest.TestCase):
         self.assertEqual(engine.get_median(), 5)
 
     def test_empty_list(self):
-        engine = StatEngine([])
         with self.assertRaises(ValueError):
-            engine.get_mean()
-        with self.assertRaises(ValueError):
-            engine.get_median()
-        with self.assertRaises(ValueError):
-            engine.get_std_dev()
+            engine = StatEngine([])
 
     def test_standard_deviation_known(self):
         data = [2, 4, 4, 4, 5, 5, 7, 9]
         engine = StatEngine(data)
-        self.assertAlmostEqual(engine.get_std_dev(), 2.0, places=5)
+        self.assertAlmostEqual(engine.get_standard_deviation(), 2.0, places=5)
 
 if __name__ == '__main__':
     unittest.main()
