@@ -1,5 +1,6 @@
 import math
 class StatEngine:
+# for error handling and data cleaning
     def __init__(self,data):
         if not data:
             raise ValueError("Data cannot be empty")
@@ -48,3 +49,17 @@ class StatEngine:
     
     def get_standard_deviation(self, is_sample=True):
         return math.sqrt(self.get_varience(is_sample))
+
+#returns the list of outliers based on z-score method   
+    def get_outliers(self, threshold=2):
+        mean= self.get_mean()
+        std = self.get_standard_deviation()
+
+        outliers =[]
+        for x in self.data:
+            z_score = abs((x - mean)/ std)
+            if z_score > threshold:
+                outliers.append(x)
+            
+        return outliers
+    
