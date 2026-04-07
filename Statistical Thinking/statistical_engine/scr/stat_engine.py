@@ -13,4 +13,7 @@ class StatEngine:
         self.data=cleaned
         self.n = len(cleaned)
 
-        
+    def get_mean(self):
+        return sum(self.data) / self.n
+    
+    
