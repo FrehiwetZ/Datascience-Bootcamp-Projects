@@ -1,3 +1,6 @@
+import unittest
+
+
 class TestStatEngine( unittest.TestCase):
 
     def setUp(self):
@@ -14,5 +17,7 @@ class TestStatEngine( unittest.TestCase):
         self.assertEqual(self.engine.get_mode(), "No mode")
     
     def test_variance(self):
-        self.assertAlmostEqual(self.engine.get_varience(), 2.5)
+        self.assertAlmostEqual(self.engine.get_variance(), 2.5)
 
+if __name__ == "__main__":
+    unittest.main()
