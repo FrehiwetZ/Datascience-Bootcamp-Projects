@@ -51,3 +51,37 @@ z = \frac{|x_i - \bar{x}|}{\text{Std Dev}}
 ```bash
 git clone <https://github.com/FrehiwetZ/Datascience-Bootcamp-Projects>
 cd <Stastical thinking>/statistical_engine
+```
+## Testing
+
+Unit tests are included in `test_stat_engine.py` using Python’s built-in `unittest` framework.
+
+### How to Execute the Test Suite:
+```bash
+python -m unittest test_stat_engine.py
+```
+Tests cover:
+
+Correct mean and median calculations for odd and even-length lists.
+Handling of empty datasets (raises ValueError).
+Correct mapping of standard deviation to known outcomes.
+Accurate calculation of sample vs population variance.
+Ensures mode is returned correctly or indicates "No mode." 
+
+
+#Acceptance criteria checklist
+The following checklist demonstrates that the project meets all required functionality and edge-case handling:
+| Requirement                                           | Status |
+| ----------------------------------------------------- | ------ |
+| Handles empty lists gracefully (raises `ValueError`)  | ✅      |
+| Ignores invalid data types (raises `TypeError`)       | ✅      |
+| Calculates mean correctly for any dataset             | ✅      |
+| Calculates median correctly for even and odd datasets | ✅      |
+| Returns mode or "No mode" if all elements are unique  | ✅      |
+| Calculates sample and population variance accurately  | ✅      |
+| Computes standard deviation correctly                 | ✅      |
+| Detects outliers using Z-score method                 | ✅      |
+| Monte Carlo simulation runs for multiple day ranges   | ✅      |
+| All unit tests pass                                   | ✅      |
+
+
