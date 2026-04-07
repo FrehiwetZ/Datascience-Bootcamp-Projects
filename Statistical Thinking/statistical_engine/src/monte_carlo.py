@@ -10,7 +10,7 @@ def simulate_crashes(days):
     return crashes / days
 
 #for diplaying the results of the simulation
-def run_simulation():
+def run_simulations():
     for days in [10,100,10000]:
         prob = simulate_crashes(days)
         print(f"Days: {days}, Simulated Crash Probability: {prob}")

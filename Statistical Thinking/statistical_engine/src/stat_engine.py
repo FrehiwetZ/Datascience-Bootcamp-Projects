@@ -39,7 +39,7 @@ class StatEngine:
         modes = [k for k, v in freq.items() if v == max_freq]
         return modes
 # for the dispersion
-    def get_varience(self, is_sample=True):
+    def get_variance(self, is_sample=True):
         mean = self.get_mean()
         sum_squared_diff = sum((x - mean) ** 2 for x in self.data)
         if is_sample:
@@ -48,7 +48,7 @@ class StatEngine:
             return sum_squared_diff / self.n
     
     def get_standard_deviation(self, is_sample=True):
-        return math.sqrt(self.get_varience(is_sample))
+        return math.sqrt(self.get_variance(is_sample))
 
 #returns the list of outliers based on z-score method   
     def get_outliers(self, threshold=2):
@@ -62,4 +62,4 @@ class StatEngine:
                 outliers.append(x)
             
         return outliers
-    
+

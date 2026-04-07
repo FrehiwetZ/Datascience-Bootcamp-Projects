@@ -1,17 +1,13 @@
-import sys
-import os
 import json
+import os
 
-sys.path.append(os.path.abspath("src"))
+from src.stat_engine import StatEngine
+from src.monte_carlo import run_simulations
 
-from stat_engine import StatEngine
-from monte_carlo import run_simulations
-
-# Load user JSON data
-file_path = os.path.join("data", "sample_salaries.json")
-
-with open(file_path) as f:
+# Load the user created JSON data 
+with open("./data/sample_salaries.json","r") as f:
     data = json.load(f)
+
 engine = StatEngine(data)
 
 print("Mean:", engine.get_mean())
@@ -21,5 +17,5 @@ print("Variance:", engine.get_variance())
 print("Std Dev:", engine.get_standard_deviation())
 print("Outliers:", engine.get_outliers())
 
-# Run the simulation
+# Run simulation
 run_simulations()
