@@ -1,3 +1,4 @@
+import math
 class StatEngine:
     def __init__(self,data):
         if not data:
@@ -36,4 +37,14 @@ class StatEngine:
         
         modes = [k for k, v in freq.items() if v == max_freq]
         return modes
+# for the dispersion
+    def get_varience(self, is_sample=True):
+        mean = self.get_mean()
+        sum_squared_diff = sum((x - mean) ** 2 for x in self.data)
+        if is_sample:
+            return sum_squared_diff / (self.n - 1)
+        else:
+            return sum_squared_diff / self.n
     
+    def get_standard_deviation(self, is_sample=True):
+        return math.sqrt(self.get_varience(is_sample))
