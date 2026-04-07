@@ -16,4 +16,12 @@ class StatEngine:
     def get_mean(self):
         return sum(self.data) / self.n
     
+    def get_median(self):
+        sorted_data = sorted(self.data)
+        mid = self.n // 2
+        if self.n % 2 == 0:
+            return (sorted_data[mid - 1] + sorted_data[mid]) / 2
+        else:
+            return sorted_data[mid]
+        
     
