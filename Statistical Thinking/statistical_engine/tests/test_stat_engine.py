@@ -7,5 +7,8 @@ class TestStatEngine(unittest.TestCase):
     def test_mean(self):
         self.assertEqual(self.engine.get_mean(), 3)
 
+    def test_median(self):
+        self.assertEqual(self.engine.get_median(), 3)
+
     
     
