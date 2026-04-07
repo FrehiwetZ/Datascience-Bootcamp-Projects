@@ -10,5 +10,6 @@ class TestStatEngine(unittest.TestCase):
     def test_median(self):
         self.assertEqual(self.engine.get_median(), 3)
 
-    
+    def test_mode(self):
+        self.assertEqual(self.engine.get_mode(), "No mode")
     
