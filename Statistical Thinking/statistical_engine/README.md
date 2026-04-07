@@ -49,7 +49,7 @@ z = \frac{|x_i - \bar{x}|}{\text{Std Dev}}
 
 1. **Clone the repository:**
 ```bash
-git clone <https://github.com/FrehiwetZ/Datascience-Bootcamp-Projects>
+git clone <https://github.com/FrehiwetZ/Datascience-Bootcamp-Projects/tree/main/Statistical%20Thinking/statistical_engine>
 cd <Stastical thinking>/statistical_engine
 ```
 ## Testing
@@ -84,4 +84,6 @@ The following checklist demonstrates that the project meets all required functio
 | Monte Carlo simulation runs for multiple day ranges   | ✅      |
 | All unit tests pass                                   | ✅      |
 
-
+#Author
+Name: Frehiwet Zerihun
+Date:April 7,2026G.c
