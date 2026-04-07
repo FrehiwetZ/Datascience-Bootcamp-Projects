@@ -49,5 +49,5 @@ z = \frac{|x_i - \bar{x}|}{\text{Std Dev}}
 
 1. **Clone the repository:**
 ```bash
-git clone <>
+git clone <https://github.com/FrehiwetZ/Datascience-Bootcamp-Projects>
 cd <Stastical thinking>/statistical_engine
