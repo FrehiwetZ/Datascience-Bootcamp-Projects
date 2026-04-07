@@ -1,4 +1,4 @@
-class TestStatEngine(unittest.TestCase):
+class TestStatEngine( unittest.TestCase):
 
     def setUp(self):
         self.data = [1, 2, 3, 4, 5]
@@ -13,3 +13,6 @@ class TestStatEngine(unittest.TestCase):
     def test_mode(self):
         self.assertEqual(self.engine.get_mode(), "No mode")
     
+    def test_variance(self):
+        self.assertAlmostEqual(self.engine.get_varience(), 2.5)
+

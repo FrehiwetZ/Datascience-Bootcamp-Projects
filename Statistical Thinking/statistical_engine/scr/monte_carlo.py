@@ -5,9 +5,10 @@ def simulate_crashes(days):
     crashes = 0
 
     for _ in range(days):
-        if random.random() < crash_probaility:
+        if random.random() < crash_probability:
             crashes +=1 
     return crashes / days
+
 #for diplaying the results of the simulation
 def run_simulation():
     for days in [10,100,10000]:
