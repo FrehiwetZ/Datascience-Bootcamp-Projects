@@ -12,3 +12,16 @@ print(df.info())
 
 print("\nStatistical Summary:")
 print(df.describe())
+
+#Data Cleaning
+
+df["Age"].fillna(df["Age"].median(), inplace=True)
+
+df["Embarked"].fillna(df["Embarked"].mode()[0], inplace=True)
+
+df.drop(columns=["Cabin"], inplace=True)
+
+df.drop_duplicates(inplace = True)
+
+
+                          
