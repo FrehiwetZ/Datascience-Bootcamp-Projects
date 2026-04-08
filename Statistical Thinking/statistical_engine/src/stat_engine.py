@@ -42,7 +42,7 @@ class StatEngine:
 
     # Dispersion
     def get_variance(self, is_sample=False):
-        """By default, compute population variance to match the test expectation"""
+        
         mean = self.get_mean()
         sum_squared_diff = sum((x - mean) ** 2 for x in self.data)
         if is_sample:
@@ -51,7 +51,7 @@ class StatEngine:
             return sum_squared_diff / self.n
 
     def get_standard_deviation(self, is_sample=False):
-        """By default, population SD for tests"""
+        
         return math.sqrt(self.get_variance(is_sample))
 
     # Outliers
