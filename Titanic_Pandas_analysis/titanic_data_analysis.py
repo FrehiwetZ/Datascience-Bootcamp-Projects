@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("titanic.csv")
+df = pd.read_csv("train.csv")
 
 #Exploration of the dataset
 
