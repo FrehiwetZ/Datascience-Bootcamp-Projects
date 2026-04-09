@@ -46,3 +46,17 @@ survival_age_group = df.groupby("AgeGroup")["Survived"].mean()
 print("\nSurvival Rate By Age Group:")
 print(survival_age_group)
 
+#filterring data for specific analysis
+
+female_survivors =df[(df["Sex"]== "female") & (df["Survived"] == 1)]
+print("\nFemale Passengers Who Survived:")
+print(female_survivors)
+
+children_survivors = df[(df["Age"] < 12) & (df["Survived"] == 1)]
+print("\nChildren Who Survived:")
+print(children_survivors)
+
+first_class_survivors = df[(df["Pclass"] == 1) & (df["Survived"] == 1)]
+print("\nFirst-Class Passengers Who Survived:")
+print(first_class_survivors)
+
