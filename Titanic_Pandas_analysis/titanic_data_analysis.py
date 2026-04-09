@@ -60,3 +60,14 @@ first_class_survivors = df[(df["Pclass"] == 1) & (df["Survived"] == 1)]
 print("\nFirst-Class Passengers Who Survived:")
 print(first_class_survivors)
 
+#Data Visualization
+
+print("\n----- Insights -----")
+
+print("1. Females were more likely to survive than males.")
+
+print("2. Passenger class affected survival. 1st class passengers had the highest survival rate.")
+
+print("3. Children had higher survival chances, indicating that children were prioritized.")
+
+print("4. Female passengers in 1st class had the highest survival probability.")
