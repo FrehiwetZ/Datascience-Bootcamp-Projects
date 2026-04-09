@@ -40,7 +40,7 @@ print(survival_age)
 df["AgeGroup"] = pd.cut(
     df["Age"],
     bins=[0 ,12, 18, 35, 60, 100], 
-    labels=["Child", "Young", "Adult", "Senior"])
+    labels=["Child", "Young", "Young Adult", "Adult", "Senior"])
 
 survival_age_group = df.groupby("AgeGroup")["Survived"].mean()
 print("\nSurvival Rate By Age Group:")
